@@ -19,16 +19,16 @@
 #'    ))
 #'
 #' num.mis <- count_missings(df)
-#' plot_missings(num.mis, mis = "mi", nm = "p", lbs = 10)
+#' plot_missings(num.mis, "none", 10)
 
-plot_missings <- function(data, mis, nm, lbs, grid = "y") {
-    ggplot(data, aes_string(mis, nm)) + geom_point() +
+
+plot_missings <- function(data, grid, lbs) {
+    ggplot(data, aes_string("mi", "p")) + geom_point() +
       xlab("Anzahl Missings") + ylab("") +
       background_grid(grid) +
       theme(
           axis.text.y = element_text(size = lbs)
           )
 }
-
 
 

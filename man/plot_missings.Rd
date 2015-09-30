@@ -4,15 +4,15 @@
 \alias{plot_missings}
 \title{plot_missings}
 \usage{
-plot_missings(data, grid, lbs)
+plot_missings(data, mis, nm, lbs, grid = "y")
 }
 \arguments{
 \item{data}{Dataframe in which missings are stored, columns have to be named
 "mi" and "p"}
 
-\item{grid}{whether gridlines should be plotted, requieres package("cowplot")}
-
 \item{lbs}{Labelsize of variable names, shoul be smaller, if more variables are plotted}
+
+\item{grid}{whether gridlines should be plotted, requieres package("cowplot")}
 }
 \description{
 Function for plotting number of missing data,
@@ -28,7 +28,7 @@ df <- as.data.frame(cbind(
    ))
 
 num.mis <- count_missings(df)
-plot_missings(num.mis, "none", 10)
+plot_missings(num.mis, mis = "mi", nm = "p", lbs = 10)
 }
 \keyword{missings,}
 \keyword{plot}
