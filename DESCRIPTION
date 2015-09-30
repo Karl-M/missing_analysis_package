@@ -1,0 +1,10 @@
+Package: missing.analysis
+Title: Package for handling, plotting and analysis of missing data
+Version: 0.0.0.9000
+Authors@R: person("Karl", "Müller", email = "djdanger@gmx.de", role = c("aut", "cre"))
+Description: Package for handling, plotting and analysis of missing data. Especially for data from SPSS or other
+    software, where R does not recognize correctly the nissing data. Makes use of the concept of labels and value
+    labels, known from SPSS ans Stata.
+Depends: R (>= 3.2.2)
+License: What license is it under?
+LazyData: true
